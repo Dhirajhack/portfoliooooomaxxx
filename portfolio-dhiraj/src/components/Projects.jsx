@@ -1,6 +1,6 @@
 import "./Projects.css";
-import p1 from "../assets/project1.png";
-import p2 from "../assets/project2.png";
+import p1 from "../assets/Project1.png";
+import p2 from "../assets/Project2.png";
 
 const projects = [
   {
