@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #0b0b12;
+  min-height: 100vh;
+}
+
+/* NAVBAR */
+
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1100px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 30px;
+  border-radius: 18px;
+
+  background: linear-gradient(
+    120deg,
+    #ff00cc,
+    #3333ff,
+    #00ffee,
+    #ff9900
+  );
+  background-size: 300% 300%;
+  animation: waveMove 8s ease infinite;
+
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.25);
+
+  z-index: 9999; /* 🔥 THIS FIXES IT */
+}
+
+
+/* LOGO */
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 2px;
+}
+
+/* LINKS */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 5px 0;
+}
+
+/* HOVER UNDERLINE EFFECT */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: white;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* GRADIENT WAVE ANIMATION */
+@keyframes waveMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

@@ -1,0 +1,54 @@
+.social-section {
+  padding: 100px 8%;
+  background: #0b0b12;
+  text-align: center;
+}
+
+.social-section h2 {
+  font-size: 40px;
+  color: cyan;
+  margin-bottom: 10px;
+}
+
+.social-section p {
+  color: #bbb;
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 30px;
+  transition: 0.3s;
+  position: relative;
+}
+
+.social-icons a:hover {
+  color: cyan;
+  transform: translateY(-5px);
+  text-shadow: 0 0 10px cyan, 0 0 20px cyan;
+}
+
+/* Optional: glowing effect animation */
+.social-icons a:hover::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px cyan, 0 0 40px cyan;
+  animation: glowPulse 1.5s infinite alternate;
+}
+
+@keyframes glowPulse {
+  from { box-shadow: 0 0 10px cyan, 0 0 20px cyan; }
+  to { box-shadow: 0 0 25px cyan, 0 0 50px cyan; }
+}
